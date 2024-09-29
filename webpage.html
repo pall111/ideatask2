@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO App</title>
+    <style>
+        body {
+            background-color: #f5e3e3; /* Light pink background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+            text-align: center; /* Center text */
+        }
+
+        .container {
+            background-color: #f0b3c6; /* Soft pink background */
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px; /* Set a fixed width for the container */
+            height: auto; /* Change height to auto */
+            color: #3d003d; /* Darker pink text */
+        }
+
+        .input-container {
+            display: flex; /* Use flexbox for alignment */
+            justify-content: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+            margin-bottom: 20px; /* Space below input */
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 5px;
+            width: 70%; /* Width of the input field */
+            background-color: #e26a8d; /* Input field pink */
+            color: white; /* Text color */
+            border: none;
+        }
+
+        /* Change placeholder text color */
+        input[type="text"]::placeholder {
+            color: #3d003d; /* Darker pink for placeholder */
+            opacity: 1; /* Make sure it is fully opaque */
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #d15d8b; /* Button pink */
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px; /* Space between input and button */
+        }
+
+        button:hover {
+            background-color: #b54e75; /* Darker pink on hover */
+        }
+
+        .work {
+            text-align: left;
+            padding: 10px; /* Space inside the work section */
+            border: 2px solid white; /* White border */
+            border-radius: 5px; /* Rounded corners */
+            margin-top: 20px; /* Space above the work section */
+            background-color: #f0b3c6; /* Match background color */
+            margin-bottom: 20px; /* Space below the work section */
+        }
+
+        .work ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .work li {
+            margin-bottom: 12px; /* Space between list items */
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        /* Add space for future tasks */
+        .empty-space {
+            height: 200px; /* Adjust height for empty space */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MY TODO LIST</h1>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Enter your task" disabled>
+            <button disabled>Add</button>
+        </div>
+        <div class="work">
+            <h2>My Tasks</h2>
+            <ul id="taskList">
+                <li><input type="checkbox"> Buy tomatoes</li>
+                <li><input type="checkbox"> Pick kids from school</li>
+                <li><input type="checkbox"> Wash dishes</li>
+            </ul>
+            <div class="empty-space"></div> <!-- Space for additional tasks -->
+        </div>
+        <p><strong>Completed: 0</strong> | <strong>Uncompleted: 0</strong></p>
+    </div>
+</body>
+</html>
